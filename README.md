@@ -76,12 +76,14 @@ This is a comprehensive Spring Boot backend API for a banking application with P
 ## Setup Instructions
 
 ### 1. Clone the Repository
+
 ```bash
 git clone <repository-url>
 cd banking-backend
 ```
 
 ### 2. Database Setup
+
 - Install PostgreSQL and create a database named `banking_app`
 - Run the SQL script provided in `database-setup.sql` to create tables and sample data
 - Update `src/main/resources/application.properties` with your database credentials:
@@ -93,6 +95,7 @@ spring.datasource.password=your_password
 ```
 
 ### 3. Build and Run
+
 ```bash
 # Install dependencies and compile
 mvn clean install
@@ -102,6 +105,7 @@ mvn spring-boot:run
 ```
 
 ### 4. Test the API
+
 - API will be available at `http://localhost:8080`
 - Test endpoints using Postman or curl
 - Default test credentials: `demo@securebank.com` / `password`
@@ -109,12 +113,14 @@ mvn spring-boot:run
 ## Environment Configuration
 
 Create different property files for different environments:
+
 - `application-dev.properties` - Development environment
 - `application-prod.properties` - Production environment
 
 ## API Testing
 
 ### Sample Login Request
+
 ```bash
 curl -X POST http://localhost:8080/api/auth/signin \
   -H "Content-Type: application/json" \
@@ -122,6 +128,7 @@ curl -X POST http://localhost:8080/api/auth/signin \
 ```
 
 ### Sample Account Request (with JWT token)
+
 ```bash
 curl -X GET http://localhost:8080/api/accounts \
   -H "Authorization: Bearer YOUR_JWT_TOKEN"
@@ -130,6 +137,7 @@ curl -X GET http://localhost:8080/api/accounts \
 ## Git Workflow
 
 This project uses Git for version control. The repository includes:
+
 - Complete Spring Boot backend source code
 - Database schema and setup scripts
 - Maven configuration and dependencies
